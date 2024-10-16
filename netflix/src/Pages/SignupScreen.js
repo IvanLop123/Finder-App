@@ -1,29 +1,38 @@
 import './SignupScreen.css'; 
 import React, { useRef } from "react";
 import { auth } from "../firebase";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"; // Import these from firebase/auth
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 
 function SignupScreen() {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
-    const register = (e) => {
+    const register = async (e) => {
         e.preventDefault();
-        createUserWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-            .then((authUser) => {
-                console.log(authUser);
-            })
-            .catch((error) => {
-                alert(error.message);
-            });
+        try {
+            const authUser = await createUserWithEmailAndPassword(
+                auth,
+                emailRef.current.value,
+                passwordRef.current.value
+            );
+            console.log('User created: ', authUser);
+        } catch (error) {
+            alert('Error creating account: ', error.message);
+        }
     };
 
-    const signIn = (e) => {
+    const signIn = async (e) => {
         e.preventDefault();
-        signInWithEmailAndPassword(auth, emailRef.current.value, passwordRef.current.value)
-            .catch((error) => {
-                alert(error.message);
-            });
+        try {
+            const authUser = await signInWithEmailAndPassword(
+                auth,
+                emailRef.current.value,
+                passwordRef.current.value
+            );
+            console.log('User signed in: ', authUser);
+        } catch (error) {
+            alert('Error signing in: ', error.message);
+        }
     };
 
     return (
