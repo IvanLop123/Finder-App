@@ -1,9 +1,10 @@
 import React from 'react';
 import "./HomeScreen.css";
-import Nav from './Nav';
-import Banner from './Banner';
-import Requests from './Requests';
-import Row from './Row';
+import Nav from '../Nav';
+import Banner from '../Banner';
+import Requests from '../Requests';
+import Row from '../Row';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function HomeScreen(){
     return(
