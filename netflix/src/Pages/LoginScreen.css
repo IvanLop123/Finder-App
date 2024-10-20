@@ -52,6 +52,7 @@
 .loginScreen_body > h1{
     font-size: 3.125;
     margin-bottom: 20px;
+    margin-right: -5%;
 }
 .loginScreen_body > h2 {
     font-size: 2rem;
