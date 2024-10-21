@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Nav() {
     const [show, handleShow] = useState(false);
-    const navigate = useNavigate(); // Use navigate from React Router v6
+    const navigate = useNavigate(); 
 
     const transitionNavBar = () => {
         if (window.scrollY > 100) {
@@ -26,6 +26,12 @@ function Nav() {
                 onClick={() => navigate("/")} 
                     className='nav_logo'
                     src="https://www.shutterstock.com/image-vector/golden-christian-cross-icon-symbol-600nw-2457605007.jpg"
+                    alt=""
+                />
+                <img
+                    onClick={() => navigate("/study")} 
+                    className='study'
+                    src="https://us.123rf.com/450wm/asmaparin/asmaparin2408/asmaparin240810787/234904922-brain-with-open-book-and-feather-pen-vector-illustration-on-black-background.jpg?ver=6"
                     alt=""
                 />
                 <img

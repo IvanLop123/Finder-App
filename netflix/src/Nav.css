@@ -1,37 +1,53 @@
-
-.nav{
+.nav {
     position: fixed;
     top: 0;
     padding: 20px;
     width: 100%;
     height: 55px;
     z-index: 1;
-
     transition-timing-function: ease-in;
     transition: all 0.5s;
-
 }
-.nav_contents{
+
+.nav_contents {
     display: flex;
     justify-content: space-between;
 }
-.nav_logo{
+
+.nav_logo {
     position: fixed;
     top: 10px;
     left: 0;
     width: 80px;
-    object-fit: contain;
+    height: 80px; /* Ensures the image is a circle */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the logo circular */
     padding-left: 20px;
     cursor: pointer;
 }
 
-.nav_avatar{
+.study {
+    position: fixed;
+    top: 10px;
+    left: 90px;
+    width: 80px;
+    height: 80px; /* Ensures the image is a circle */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the study image circular */
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.nav_avatar {
     cursor: pointer;
     position: fixed;
     right: 20px;
-    width: 30px;
-
+    width: 50px;
+    height: 50px; /* Ensures the avatar is a circle */
+    object-fit: cover;
+    border-radius: 50%; /* Makes the avatar circular */
 }
-.nav_black{
+
+.nav_black {
     background-color: #111;
 }

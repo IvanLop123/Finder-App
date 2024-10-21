@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice'; 
 import ProfileScreen from './Pages/ProfileScreen';
+import StudyScreen from './Pages/StudyScreen';
 
 function App() {
   const user = useSelector(selectUser); 
@@ -32,9 +33,10 @@ function App() {
         {!user ? (
           <LoginScreen />
         ) : (
-          <Routes> {/* Wrap your Route components inside Routes */}
+          <Routes>
+            <Route exact path="study" element={<StudyScreen />} /> 
             <Route exact path="/" element={<HomeScreen />} />
-            <Route path="/profile" element={<ProfileScreen />} /> {/* Updated to use Routes properly */}
+            <Route path="/profile" element={<ProfileScreen />} /> 
           </Routes>
         )}
       </Router>
