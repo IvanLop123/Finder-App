@@ -19,9 +19,9 @@
     top: 10px;
     left: 0;
     width: 80px;
-    height: 80px; /* Ensures the image is a circle */
+    height: 80px; 
     object-fit: cover;
-    border-radius: 50%; /* Makes the logo circular */
+    border-radius: 50%; 
     padding-left: 20px;
     cursor: pointer;
 }
@@ -31,9 +31,9 @@
     top: 10px;
     left: 90px;
     width: 80px;
-    height: 80px; /* Ensures the image is a circle */
+    height: 80px; 
     object-fit: cover;
-    border-radius: 50%; /* Makes the study image circular */
+    border-radius: 50%; 
     padding-left: 20px;
     cursor: pointer;
 }
@@ -43,9 +43,9 @@
     position: fixed;
     right: 20px;
     width: 50px;
-    height: 50px; /* Ensures the avatar is a circle */
+    height: 50px; 
     object-fit: cover;
-    border-radius: 50%; /* Makes the avatar circular */
+    border-radius: 50%; 
 }
 
 .nav_black {

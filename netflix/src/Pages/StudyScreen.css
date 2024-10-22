@@ -1,0 +1,22 @@
+.studyScreen {
+    display: flex;
+    height: 100vh;
+    background-color: black; /* Background set to black */
+    padding-top: 60px; 
+}
+
+.sideNav_toggle {
+    position: fixed;
+    top: 70px; /* Just below the Nav */
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white; 
+    z-index: 101;
+}
+
+.sideNav_toggle:hover {
+    color: #999;
+}
