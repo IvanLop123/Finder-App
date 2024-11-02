@@ -1,0 +1,95 @@
+[debug] [2024-11-02T22:29:27.837Z] ----------------------------------------------------------------------
+[debug] [2024-11-02T22:29:27.842Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init functions
+[debug] [2024-11-02T22:29:27.842Z] CLI Version:   13.22.0
+[debug] [2024-11-02T22:29:27.842Z] Platform:      darwin
+[debug] [2024-11-02T22:29:27.842Z] Node Version:  v20.18.0
+[debug] [2024-11-02T22:29:27.842Z] Time:          Sat Nov 02 2024 18:29:27 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-11-02T22:29:27.842Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-02T22:29:27.843Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-11-02T22:29:27.892Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-02T22:29:27.892Z] > authorizing via signed-in user (ivanslopez293@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ivanlopez/Documents/GitHub/Finder-App/netflix
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-11-02T22:29:27.894Z] Using project from CLI flag: finder-7deef
+[debug] [2024-11-02T22:29:27.894Z] Checked if tokens are valid: false, expires at: 1729052917532
+[debug] [2024-11-02T22:29:27.894Z] Checked if tokens are valid: false, expires at: 1729052917532
+[debug] [2024-11-02T22:29:27.894Z] > refreshing access token with scopes: []
+[debug] [2024-11-02T22:29:27.894Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-02T22:29:27.894Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-02T22:29:28.027Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-11-02T22:29:28.027Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-11-02T22:29:28.067Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-11-02T22:29:28.067Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-02T22:29:28.076Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/finder-7deef [none]
+[debug] [2024-11-02T22:29:28.275Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/finder-7deef 200
+[debug] [2024-11-02T22:29:28.275Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/finder-7deef {"projectId":"finder-7deef","projectNumber":"494776973010","displayName":"Finder","name":"projects/finder-7deef","resources":{"hostingSite":"finder-7deef"},"state":"ACTIVE","etag":"1_79fcf38c-0ca6-4b3e-b574-f97fa811e49d"}
+[info] i  Using project finder-7deef (Finder) 
+[info] 
+=== Functions Setup
+[debug] [2024-11-02T22:29:28.282Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-02T22:29:28.282Z] > authorizing via signed-in user (ivanslopez293@gmail.com)
+[debug] [2024-11-02T22:29:28.282Z] [iam] checking project finder-7deef for permissions ["firebase.projects.get"]
+[debug] [2024-11-02T22:29:28.283Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.283Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.283Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/finder-7deef:testIamPermissions [none]
+[debug] [2024-11-02T22:29:28.283Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/finder-7deef:testIamPermissions x-goog-quota-user=projects/finder-7deef
+[debug] [2024-11-02T22:29:28.283Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/finder-7deef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-02T22:29:28.525Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/finder-7deef:testIamPermissions 200
+[debug] [2024-11-02T22:29:28.526Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/finder-7deef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-11-02T22:29:28.526Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.526Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.527Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.527Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.527Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-02T22:29:28.527Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/finder-7deef
+[debug] [2024-11-02T22:29:28.528Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-02T22:29:28.528Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/finder-7deef
+[debug] [2024-11-02T22:29:28.888Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-02T22:29:28.889Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-11-02T22:29:28.889Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.889Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:28.890Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-11-02T22:29:28.890Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/finder-7deef
+[debug] [2024-11-02T22:29:28.899Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-02T22:29:28.899Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-02T22:29:29.224Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-11-02T22:29:29.225Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-11-02T22:29:39.227Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:39.228Z] Checked if tokens are valid: true, expires at: 1730590167067
+[debug] [2024-11-02T22:29:39.228Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-02T22:29:39.228Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/finder-7deef
+[debug] [2024-11-02T22:29:39.487Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-02T22:29:39.488Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/finder-7deef/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 

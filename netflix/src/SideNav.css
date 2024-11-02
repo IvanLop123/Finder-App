@@ -2,11 +2,11 @@
     height: 100%;
     width: 250px;
     position: fixed;
-    top: 60px; /* Below the Nav */
-    left: -250px; /* Initially hidden on the left */
-    background-color: black; /* Set to black */
+    top: 60px; /* Start just below the Nav bar */
+    left: -250px; /* Hidden initially */
+    background-color: black;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: 0.3s;
+    transition: left 0.5s ease; /* Smooth sliding */
     z-index: 100;
 }
 
@@ -17,7 +17,7 @@
 .sideNav_menu {
     list-style: none;
     padding: 0;
-    margin-top: 140px;
+    margin-top: 20px;
 }
 
 .sideNav_item {
@@ -25,12 +25,12 @@
     align-items: center;
     padding: 15px 20px;
     cursor: pointer;
-    color: white; /* Ensure text is white */
+    color: white;
     transition: background-color 0.3s ease;
 }
 
 .sideNav_item:hover {
-    background-color: #333; /* Slightly lighter hover */
+    background-color: #333;
 }
 
 .sideNav_item span {
@@ -42,4 +42,17 @@
 .sideNav_item svg {
     font-size: 20px;
     color: white;
+}
+
+/* Styling for the hamburger icon in Nav.css */
+.hamburger-menu {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px; /* Position near the other icons */
+    z-index: 101; /* Keep above other elements */
 }

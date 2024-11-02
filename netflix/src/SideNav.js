@@ -1,12 +1,12 @@
 import React from 'react';
 import './SideNav.css';
-import { AiFillHome } from 'react-icons/ai'; 
-import { IoIosPaper, IoMdPeople, IoMdHelpCircle } from 'react-icons/io'; 
+import { AiFillHome } from 'react-icons/ai';
+import { IoIosPaper, IoMdPeople, IoMdHelpCircle } from 'react-icons/io';
 import { FaCartPlus, FaEnvelopeOpenText } from 'react-icons/fa';
 
 function SideNav({ isOpen, toggleSideNav }) {
     return (
-        <nav className={`sideNav ${isOpen ? "open" : ""}`}>
+        <nav className={`sideNav ${isOpen ? 'open' : ''}`}>
             <ul className="sideNav_menu">
                 <li className="sideNav_item" onClick={toggleSideNav}>
                     <AiFillHome />
@@ -14,7 +14,7 @@ function SideNav({ isOpen, toggleSideNav }) {
                 </li>
                 <li className="sideNav_item" onClick={toggleSideNav}>
                     <IoIosPaper />
-                    <span>Reports</span>
+                    <span>Study</span>
                 </li>
                 <li className="sideNav_item" onClick={toggleSideNav}>
                     <FaCartPlus />

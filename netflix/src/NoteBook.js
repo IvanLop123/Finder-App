@@ -49,6 +49,7 @@ function NoteBook({ id, title, content, onEdit, onDelete }) {
   );
 }
 
+
 function Notebook() {
   const [notes, setNotes] = useState([]);
 
@@ -71,10 +72,18 @@ function Notebook() {
     setNotes(notes.filter((note) => note.id !== id));
   };
 
+  const copyAllNotes = () => {
+    const allContent = notes.map(note => `${note.title}\n${note.content}`).join('\n\n');
+    navigator.clipboard.writeText(allContent)
+      .then(() => alert("All notes copied to clipboard!"))
+      .catch(err => console.error("Failed to copy notes: ", err));
+  };
+
   return (
     <div className="notebook">
       <h1>My Notebook</h1>
-      <button className='add' onClick={addNote}>Add Note</button>
+      <button className="add" onClick={addNote}>Add Note</button>
+      <button className="copy" onClick={copyAllNotes}>Copy All Notes</button>
       <div className="notes-list">
         {notes.map((note) => (
           <NoteBook
@@ -91,4 +100,4 @@ function Notebook() {
   );
 }
 
-export default Notebook;  
+export default Notebook;
